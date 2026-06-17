@@ -27,12 +27,28 @@ $(document).ready(function () {
         });
     }
 
-    // ===== mobile nav toggle =====
-    if ($('.tl-nav-toggle').length) {
-        $('.tl-nav-toggle').on('click', function () {
-            $('.tl-nav-menu').slideToggle(200).css('display', function (i, v) {
-                return v === 'block' ? 'flex' : v;
-            });
+    // ===== mobile menu (<=991px) =====
+    if ($('#tlMobileMenu').length) {
+        var $mnav = $('#tlMobileMenu');
+
+        function openMnav() {
+            $mnav.addClass('is-open').attr('aria-hidden', 'false');
+            $('body').addClass('tl-mega-open');
+        }
+
+        function closeMnav() {
+            $mnav.removeClass('is-open').attr('aria-hidden', 'true');
+            $('body').removeClass('tl-mega-open');
+        }
+
+        $('.tl-nav-toggle').on('click', openMnav);
+        $('.tl-mnav-close').on('click', closeMnav);
+
+        // close after tapping a real navigation link
+        $('.tl-mnav-scroll a[href]:not([href^="javascript"])').on('click', closeMnav);
+
+        $(document).on('keydown', function (e) {
+            if (e.key === 'Escape' && $mnav.hasClass('is-open')) closeMnav();
         });
     }
 

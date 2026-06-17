@@ -526,6 +526,190 @@ body.tl-mega-open {
     color: var(--red);
 }
 
+/* ---- mobile menu (<=991px) ---- */
+.tl-mnav {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    display: flex;
+    flex-direction: column;
+    background: rgba(20, 20, 20, 0.98);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.35s ease, opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.tl-mnav.is-open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.tl-mnav-bar {
+    flex: 0 0 auto;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--gutter);
+    border-bottom: 1px solid var(--line);
+}
+
+.tl-mnav-logo img {
+    height: 24px;
+    width: auto;
+}
+
+.tl-mnav-close {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-right: -9px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.tl-mnav-close::before,
+.tl-mnav-close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22px;
+    height: 1.5px;
+    background: #fff;
+}
+
+.tl-mnav-close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.tl-mnav-close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.tl-mnav-scroll {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 28px var(--gutter) 48px;
+}
+
+.tl-mnav-primary {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.tl-mnav-main {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.32;
+    transition: color 0.2s ease;
+}
+
+.tl-mnav-main:hover {
+    color: var(--red);
+}
+
+.tl-mnav-cta {
+    display: block;
+    margin-top: 24px;
+    text-align: center;
+    background: var(--red);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding: 15px 20px;
+    border-radius: 2px;
+    transition: opacity 0.2s ease;
+}
+
+.tl-mnav-cta:hover {
+    opacity: 0.9;
+}
+
+.tl-mnav-group {
+    margin-top: 34px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tl-mnav-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.4;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.tl-mnav-sub {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #fff;
+    opacity: 0.9;
+    padding: 7px 0;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.tl-mnav-sub:hover {
+    color: var(--red);
+    opacity: 1;
+}
+
+.tl-mnav-foot {
+    margin-top: 34px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tl-mnav-phone {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+}
+
+.tl-mnav-phone:hover {
+    opacity: 1;
+}
+
+.tl-mnav-phone span {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.45;
+}
+
+@media (min-width: 992px) {
+    .tl-mnav { display: none; }
+}
+
 /* ============================================================
    HOME PAGE CSS STARTS HERE
    ============================================================ */
@@ -1416,11 +1600,32 @@ body.tl-mega-open {
     .tl-partner,
     .tl-whoweare { padding-top: 64px; padding-bottom: 64px; }
 
+    /* ---- mobile header ---- */
     .tl-nav-menu,
     .tl-nav-world { display: none; }
 
+    .tl-nav-logo img { height: 22px; }
+
+    .tl-nav-right { gap: 8px; }
+
+    .tl-nav-search {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        opacity: 1;
+    }
+
+    .tl-nav-search img { width: 18px; height: 18px; }
+
     .tl-nav-toggle {
         display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin-right: -9px;
         background: none;
         border: none;
         cursor: pointer;
