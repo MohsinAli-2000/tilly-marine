@@ -8,6 +8,25 @@ $(document).ready(function () {
         });
     }
 
+    // ===== "life on the water" hero carousel =====
+    if ($('.tl-life-carousel').length) {
+        $('.tl-life-carousel').owlCarousel({
+            items: 1,
+            loop: true,
+            nav: true,
+            dots: true,
+            margin: 0,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: true,
+            smartSpeed: 700,
+            navText: [
+                '<span class="tl-life-arrow">&#8594;</span>',
+                '<span class="tl-life-arrow">&#8594;</span>'
+            ]
+        });
+    }
+
     // ===== mobile nav toggle =====
     if ($('.tl-nav-toggle').length) {
         $('.tl-nav-toggle').on('click', function () {

@@ -731,26 +731,152 @@ a {
     flex-direction: column;
 }
 
-/* break 1 — anniversary */
-.tl-break--anniversary .tl-break-inner {
-    justify-content: space-between;
+/* break 1 — "life on the water" carousel */
+.tl-life {
+    position: relative;
 }
 
-.tl-break--anniversary::after {
+.tl-life-carousel,
+.tl-life-carousel .owl-stage-outer,
+.tl-life-carousel .owl-stage,
+.tl-life-carousel .owl-item {
+    height: 100%;
+}
+
+.tl-life-slide {
+    position: relative;
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* top-to-bottom darkening so badge/text stay legible */
+.tl-life-slide::after {
     content: "";
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(to top, rgba(14, 14, 14, 0.55), rgba(14, 14, 14, 0) 50%);
+    background: linear-gradient(to top, rgba(14, 14, 14, 0.7), rgba(14, 14, 14, 0) 50%);
 }
 
-.tl-anniversary-badge {
-    width: 120px;
+.tl-life-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    padding: var(--gutter);
+}
+
+/* override owl's `.owl-item img { width:100% }` for the badge */
+.tl-life-badge,
+.tl-life-carousel .owl-item img.tl-life-badge {
+    position: absolute;
+    left: var(--gutter);
+    top: 295px;
+    width: 300px;
     height: auto;
 }
 
-.tl-break--anniversary h2 {
-    max-width: 520px;
+.tl-life-text {
+    position: absolute;
+    left: var(--gutter);
+    bottom: 80px;
+}
+
+.tl-life-eyebrow {
+    opacity: 0.6;
+    margin-bottom: 22px;
+}
+
+.tl-life-h2 {
+    max-width: 600px;
+    line-height: 0.94;
+}
+
+.tl-life-muted {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* ---- owl dots (dashes) ---- */
+.tl-life-carousel .owl-dots {
+    position: absolute;
+    right: 168px;
+    bottom: 48px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.tl-life-carousel .owl-dots .owl-dot {
+    display: block;
+}
+
+.tl-life-carousel .owl-dots .owl-dot span {
+    display: block;
+    width: 40px;
+    height: 2px;
+    margin: 0;
+    border-radius: 2px;
+    background: #fff;
+    opacity: 0.4;
+    transition: opacity 0.25s ease;
+}
+
+.tl-life-carousel .owl-dots .owl-dot.active span,
+.tl-life-carousel .owl-dots .owl-dot:hover span {
+    opacity: 1;
+    background: #fff;
+}
+
+/* ---- owl nav (square arrow buttons) ---- */
+.tl-life-carousel .owl-nav {
+    position: absolute;
+    right: var(--gutter);
+    bottom: 48px;
+    z-index: 3;
+    display: flex;
+    gap: 16px;
+    margin: 0;
+}
+
+.tl-life-carousel .owl-nav button.owl-prev,
+.tl-life-carousel .owl-nav button.owl-next {
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0;
+    background: transparent;
+    color: #fff;
+    transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.tl-life-carousel .owl-nav button.owl-prev:hover,
+.tl-life-carousel .owl-nav button.owl-next:hover {
+    background: transparent;
+    border-color: #fff;
+}
+
+.tl-life-carousel .owl-nav button.owl-prev.disabled,
+.tl-life-carousel .owl-nav button.owl-next.disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.tl-life-arrow {
+    display: block;
+    font-size: 13px;
+    line-height: 1;
+}
+
+.tl-life-carousel .owl-nav .owl-prev .tl-life-arrow {
+    transform: rotate(180deg);
 }
 
 /* break 2 — trade-in */
@@ -1147,6 +1273,10 @@ a {
     .tl-brands { grid-template-columns: 1fr; }
     .tl-brand { min-height: 560px; }
 
+    .tl-life-slide { height: 600px; }
+    .tl-life-badge,
+    .tl-life-carousel .owl-item img.tl-life-badge { width: 220px; top: 200px; }
+
     .tl-testdrive { grid-template-columns: 1fr; }
     .tl-testdrive-media { min-height: 420px; }
 
@@ -1171,6 +1301,13 @@ a {
     .tl-partner-grid { grid-template-columns: 1fr; }
 
     .tl-break-inner { min-height: 460px; }
+
+    .tl-life-slide { height: 520px; }
+    .tl-life-badge,
+    .tl-life-carousel .owl-item img.tl-life-badge { width: 150px; top: 120px; }
+    .tl-life-text { bottom: 120px; }
+    .tl-life-carousel .owl-dots { right: auto; left: var(--gutter); bottom: 56px; }
+    .tl-life-carousel .owl-nav { bottom: 24px; right: auto; left: var(--gutter); }
 
     .tl-newsletter-inner { flex-direction: column; align-items: flex-start; }
     .tl-newsletter-form { width: 100%; }
