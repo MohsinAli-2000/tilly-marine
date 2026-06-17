@@ -1257,7 +1257,7 @@ a {
     .tl-whoweare { padding-top: 64px; padding-bottom: 64px; }
 
     .tl-nav-menu,
-    .tl-nav-world span { display: none; }
+    .tl-nav-world { display: none; }
 
     .tl-nav-toggle {
         display: inline-flex;
