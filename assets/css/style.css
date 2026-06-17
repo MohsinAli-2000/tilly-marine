@@ -366,6 +366,166 @@ a {
     display: none;
 }
 
+/* trigger looks clickable */
+.tl-nav-world {
+    user-select: none;
+}
+
+/* ---- desktop mega menu ---- */
+body.tl-mega-open {
+    overflow: hidden;
+}
+
+.tl-mega {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(20, 20, 20, 0.98);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    overflow-y: auto;
+}
+
+.tl-mega.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.tl-mega-inner {
+    position: relative;
+    max-width: 1920px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 120px var(--gutter) 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* center vertical divider */
+.tl-mega-inner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.tl-mega-close {
+    position: absolute;
+    top: 22px;
+    right: var(--gutter);
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.tl-mega-close::before,
+.tl-mega-close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22px;
+    height: 1.5px;
+    background: #fff;
+}
+
+.tl-mega-close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.tl-mega-close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.tl-mega-close:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+.tl-mega-col--right {
+    padding-top: 232px;
+    padding-left: 80px;
+}
+
+.tl-mega-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.4;
+    line-height: 1;
+    margin-bottom: 44px;
+}
+
+.tl-mega-link {
+    display: block;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #fff;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.tl-mega-link--lg {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 16px;
+}
+
+.tl-mega-link--md {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 16px;
+}
+
+.tl-mega-link:hover {
+    color: var(--red);
+}
+
+.tl-mega-group--md {
+    margin-top: 48px;
+}
+
+.tl-mega-locations {
+    margin-top: 56px;
+    padding-top: 48px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    max-width: 420px;
+}
+
+.tl-mega-loc {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    margin-bottom: 12px;
+    transition: opacity 0.2s ease;
+    opacity: 0.85;
+}
+
+.tl-mega-loc:hover {
+    opacity: 1;
+    color: var(--red);
+}
+
 /* ============================================================
    HOME PAGE CSS STARTS HERE
    ============================================================ */

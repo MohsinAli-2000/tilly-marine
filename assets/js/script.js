@@ -36,6 +36,35 @@ $(document).ready(function () {
         });
     }
 
+    // ===== desktop mega menu =====
+    if ($('#tlMega').length) {
+        var $mega = $('#tlMega');
+
+        function openMega() {
+            $mega.addClass('is-open').attr('aria-hidden', 'false');
+            $('body').addClass('tl-mega-open');
+        }
+
+        function closeMega() {
+            $mega.removeClass('is-open').attr('aria-hidden', 'true');
+            $('body').removeClass('tl-mega-open');
+        }
+
+        // the "Tilly's World" item (with burger icon) is the desktop trigger
+        $('.tl-nav-world').on('click', openMega);
+        $('.tl-mega-close').on('click', closeMega);
+
+        // close when clicking the backdrop (outside the inner content)
+        $mega.on('click', function (e) {
+            if (e.target === this) closeMega();
+        });
+
+        // close on Escape
+        $(document).on('keydown', function (e) {
+            if (e.key === 'Escape' && $mega.hasClass('is-open')) closeMega();
+        });
+    }
+
     // ===== how-to videos category filter =====
     if ($('.tl-htv-filter').length) {
         $('.tl-htv-filter').on('click', function () {
