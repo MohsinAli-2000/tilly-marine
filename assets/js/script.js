@@ -17,6 +17,20 @@ $(document).ready(function () {
         });
     }
 
+    // ===== how-to videos category filter =====
+    if ($('.tl-htv-filter').length) {
+        $('.tl-htv-filter').on('click', function () {
+            var filter = $.trim($(this).text());
+            $('.tl-htv-filter').removeClass('is-active');
+            $(this).addClass('is-active');
+
+            $('.tl-htv-card').each(function () {
+                var cat = $.trim($(this).find('.tl-htv-cat').text());
+                $(this).css('display', (filter === 'All' || cat === filter) ? '' : 'none');
+            });
+        });
+    }
+
     // ===== service faq accordion =====
     if ($('.tl-svc-faq-item').length) {
         $('.tl-svc-faq-q').on('click', function () {
@@ -24,6 +38,70 @@ $(document).ready(function () {
             $('.tl-svc-faq-item').not(item).removeClass('is-open');
             item.toggleClass('is-open');
         });
+    }
+
+    // ===== financing payment calculator =====
+    if ($('.tl-fin-calc-grid').length) {
+        var $price = $('#finPrice');
+        var $down = $('#finDown');
+        var $apr = $('#finApr');
+        var $term = $('#finTerm');
+
+        // strip non-numeric chars, keep a decimal point for APR
+        function num(val, allowDecimal) {
+            var cleaned = String(val).replace(allowDecimal ? /[^0-9.]/g : /[^0-9]/g, '');
+            var n = parseFloat(cleaned);
+            return isNaN(n) ? 0 : n;
+        }
+
+        function money(n) {
+            return '$' + Math.round(n).toLocaleString('en-US');
+        }
+
+        function calc() {
+            var price = num($price.val(), false);
+            var down = Math.min(num($down.val(), false), price);
+            var apr = num($apr.val(), true);
+            var months = num($term.val(), false) || 0;
+
+            var financed = Math.max(price - down, 0);
+            var monthly, totalPaid;
+
+            if (months > 0) {
+                var r = (apr / 100) / 12;
+                if (r > 0) {
+                    monthly = financed * r / (1 - Math.pow(1 + r, -months));
+                } else {
+                    monthly = financed / months;
+                }
+                totalPaid = monthly * months;
+            } else {
+                monthly = 0;
+                totalPaid = financed;
+            }
+
+            var interest = Math.max(totalPaid - financed, 0);
+            var totalCost = totalPaid + down;
+
+            $('#finMonthly').text(money(monthly));
+            $('#finFinanced').text(money(financed));
+            $('#finInterest').text(money(interest));
+            $('#finTotal').text(money(totalCost));
+        }
+
+        // re-format the dollar inputs with thousands separators on blur
+        function formatDollar($el) {
+            var n = num($el.val(), false);
+            $el.val(n ? n.toLocaleString('en-US') : '');
+        }
+
+        $price.add($down).add($apr).add($term).on('input change', calc);
+        $price.add($down).on('blur', function () {
+            formatDollar($(this));
+            calc();
+        });
+
+        calc();
     }
 
 });

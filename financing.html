@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Boat financing at Tilly's Marine &mdash; competitive marine loan rates, fast approvals, and a finance team that works with top lenders to get you the best terms on a MasterCraft or Barletta. Estimate your monthly payment and get pre-approved in minutes.">
+    <meta name="author" content="Tilly Marine">
+    <title>Boat Financing | Tilly Marine</title>
+
+    <!-- ======= Bootstrap CSS ======= -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- ======= Owl Carousel CSS ======= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        referrerpolicy="no-referrer">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        referrerpolicy="no-referrer">
+
+    <!-- ======= Fancybox CSS ======= -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ======= Custom Styles ======= -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ======= Desktop Nav (shared) ======= -->
+    <header class="tl-nav">
+        <div class="tl-nav-inner">
+            <a href="home.html" class="tl-nav-logo" aria-label="Tilly's Marine home">
+                <img src="./assets/images/home/4f773e1050350288afe04896500a35e1b179f1df.png" alt="Tilly's Marine">
+            </a>
+
+            <nav class="tl-nav-menu">
+                <a href="javascript:void(0)">Sales</a>
+                <a href="service.html">Service</a>
+                <a href="storage.html">Storage</a>
+                <a href="proshop.html">Pro Shop</a>
+                <a href="javascript:void(0)" class="tl-nav-pill">Test Drive a Boat</a>
+            </nav>
+
+            <div class="tl-nav-right">
+                <button class="tl-nav-search" aria-label="Search">
+                    <img src="./assets/images/home/Vector.svg" alt="Search">
+                </button>
+                <span class="tl-nav-world">
+                    <span>Tilly's World</span>
+                    <img src="./assets/images/home/Group 3.svg" alt="Menu">
+                </span>
+                <button class="tl-nav-toggle" aria-label="Open menu">
+                    <img src="./assets/images/home/Group 3.svg" alt="Menu">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tl-page">
+
+        <!-- ======= financing page starts here ======= -->
+
+        <!-- HERO -->
+        <section class="tl-fin-hero">
+            <span class="tl-fin-hero-bg"
+                style="background-image:url('./assets/images/financing/Section.png')"></span>
+            <span class="tl-fin-hero-scrim"></span>
+
+            <nav class="tl-fin-crumb" aria-label="Breadcrumb">
+                <a href="home.html">Home</a>
+                <span>&middot;</span>
+                <span class="tl-fin-crumb-current">Financing</span>
+            </nav>
+
+            <div class="tl-fin-hero-inner">
+                <p class="tl-eyebrow tl-fin-hero-eyebrow">Financing</p>
+                <h1 class="tl-h1 tl-fin-hero-title">Get on the<br>water for <span class="tl-muted">less</span></h1>
+                <p class="tl-para tl-fin-hero-para">Competitive marine loan rates, fast approvals, and a finance team
+                    that works with top lenders to get you the best terms on a MasterCraft or Barletta.</p>
+                <div class="tl-fin-hero-actions">
+                    <a href="#apply" class="tl-btn tl-btn-red">Get Pre-Approved</a>
+                    <a href="#calculator" class="tl-btn tl-btn-outline">Estimate My Payment</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAYMENT CALCULATOR -->
+        <section class="tl-fin-calc tl-container" id="calculator">
+            <div class="tl-mc-inner">
+                <p class="tl-eyebrow">Payment Calculator</p>
+                <h2 class="tl-h2 tl-fin-calc-title">Estimate Your <span class="tl-muted">Monthly Payment</span></h2>
+                <p class="tl-para tl-fin-calc-intro">Adjust the numbers to see what owning your next boat could look
+                    like. Estimates exclude tax, title, and fees.</p>
+
+                <form class="tl-fin-calc-grid" onsubmit="return false;">
+                    <!-- inputs -->
+                    <div class="tl-fin-calc-inputs">
+                        <div class="tl-fin-field">
+                            <label for="finPrice">Boat price</label>
+                            <div class="tl-fin-input">
+                                <span class="tl-fin-prefix">$</span>
+                                <input type="text" inputmode="numeric" id="finPrice" value="99,000">
+                            </div>
+                        </div>
+                        <div class="tl-fin-field">
+                            <label for="finDown">Down payment</label>
+                            <div class="tl-fin-input">
+                                <span class="tl-fin-prefix">$</span>
+                                <input type="text" inputmode="numeric" id="finDown" value="5,500">
+                            </div>
+                        </div>
+                        <div class="tl-fin-field">
+                            <label for="finApr">Interest rate (APR)</label>
+                            <div class="tl-fin-input">
+                                <input type="text" inputmode="decimal" id="finApr" value="7.49">
+                                <span class="tl-fin-suffix">%</span>
+                            </div>
+                        </div>
+                        <div class="tl-fin-field">
+                            <label for="finTerm">Term</label>
+                            <div class="tl-fin-input">
+                                <select id="finTerm">
+                                    <option value="60">60 months (5 yr)</option>
+                                    <option value="120">120 months (10 yr)</option>
+                                    <option value="180">180 months (15 yr)</option>
+                                    <option value="240" selected>240 months (20 yr)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- result -->
+                    <div class="tl-fin-calc-result">
+                        <p class="tl-fin-result-label">Estimated Monthly Payment</p>
+                        <p class="tl-fin-result-amount" id="finMonthly">$752</p>
+                        <div class="tl-fin-result-rows">
+                            <div class="tl-fin-result-row">
+                                <span>Amount financed</span>
+                                <span id="finFinanced">$93,500</span>
+                            </div>
+                            <div class="tl-fin-result-row">
+                                <span>Total interest</span>
+                                <span id="finInterest">$87,148</span>
+                            </div>
+                            <div class="tl-fin-result-row">
+                                <span>Total cost (incl. down)</span>
+                                <span id="finTotal">$186,148</span>
+                            </div>
+                        </div>
+                        <a href="#apply" class="tl-btn tl-btn-red tl-fin-result-btn">Apply With These Terms</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- STATS STRIP -->
+        <section class="tl-fin-stats-wrap tl-container">
+            <div class="tl-mc-inner">
+                <div class="tl-fin-stats">
+                    <div class="tl-fin-stat">
+                        <p class="tl-fin-stat-num">1 day</p>
+                        <p class="tl-fin-stat-label">Typical approval</p>
+                    </div>
+                    <div class="tl-fin-stat">
+                        <p class="tl-fin-stat-num">240 mo</p>
+                        <p class="tl-fin-stat-label">Terms available</p>
+                    </div>
+                    <div class="tl-fin-stat">
+                        <p class="tl-fin-stat-num">12+</p>
+                        <p class="tl-fin-stat-label">Lending partners</p>
+                    </div>
+                    <div class="tl-fin-stat">
+                        <p class="tl-fin-stat-num">3</p>
+                        <p class="tl-fin-stat-label">SoCal locations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GET PRE-APPROVED (split) -->
+        <section class="tl-fin-apply" id="apply">
+            <div class="tl-fin-apply-text">
+                <div class="tl-fin-apply-inner">
+                    <p class="tl-eyebrow">Get Pre-Approved</p>
+                    <h2 class="tl-h2 tl-fin-apply-title">Apply in <span class="tl-muted">minutes</span></h2>
+                    <p class="tl-para tl-fin-apply-para">A soft application to get you started &mdash; no impact on your
+                        credit to check your rate. A finance specialist from your nearest location follows up the same
+                        day.</p>
+                    <p class="tl-para tl-fin-apply-note">Prefer to talk it through? Call Riverside 951-653-9253,
+                        Woodland Hills 818-225-7669, or Norco 951-479-9640.</p>
+                    <a href="javascript:void(0)" class="tl-btn tl-btn-red">Get Pre-Approved</a>
+                </div>
+            </div>
+            <div class="tl-fin-apply-media">
+                <img src="./assets/images/financing/289048ce8a063235784b2005e95891ecb5dd61db.jpg"
+                    alt="Family relaxing on a MasterCraft on the water">
+            </div>
+        </section>
+
+        <!-- TRADE-IN -->
+        <section class="tl-fin-trade"
+            style="background-image:url('./assets/images/financing/value-trade.png')">
+            <span class="tl-fin-trade-scrim"></span>
+            <div class="tl-fin-trade-inner">
+                <div class="tl-fin-trade-content">
+                    <p class="tl-eyebrow">Trade-In Program</p>
+                    <h2 class="tl-h2 tl-fin-trade-title">Value Your <span class="tl-muted">Trade-In</span></h2>
+                    <p class="tl-para tl-fin-trade-para">Upgrade to something new. Get an instant estimate on your
+                        current boat and apply that equity toward the model you've always wanted. Quick, easy, no
+                        obligation.</p>
+                    <a href="sell-trade.html" class="tl-btn tl-btn-outline">Start Your Trade Valuation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="tl-fin-faq tl-container">
+            <div class="tl-mc-inner">
+                <p class="tl-eyebrow">Answers</p>
+                <h2 class="tl-h2 tl-fin-faq-title">Boat Financing <span class="tl-muted">FAQ</span></h2>
+
+                <div class="tl-fin-faq-list">
+                    <div class="tl-svc-faq-item">
+                        <button class="tl-svc-faq-q" type="button">
+                            <span>How do I get pre-approved for a boat loan?</span>
+                            <span class="tl-svc-faq-icon">+</span>
+                        </button>
+                        <div class="tl-svc-faq-a">
+                            <p class="tl-para">Start with our soft application &mdash; it takes a few minutes and won't
+                                impact your credit to check your rate. A finance specialist from your nearest location
+                                reviews your information and follows up the same day with your options.</p>
+                        </div>
+                    </div>
+                    <div class="tl-svc-faq-item">
+                        <button class="tl-svc-faq-q" type="button">
+                            <span>What credit score do I need to finance a boat?</span>
+                            <span class="tl-svc-faq-icon">+</span>
+                        </button>
+                        <div class="tl-svc-faq-a">
+                            <p class="tl-para">Most marine lenders look for a score in the upper-600s and above for the
+                                best terms, but we work with 12+ lending partners across a range of credit profiles.
+                                Apply and we'll match you with the program that fits your situation.</p>
+                        </div>
+                    </div>
+                    <div class="tl-svc-faq-item">
+                        <button class="tl-svc-faq-q" type="button">
+                            <span>How long can I finance a boat in California?</span>
+                            <span class="tl-svc-faq-icon">+</span>
+                        </button>
+                        <div class="tl-svc-faq-a">
+                            <p class="tl-para">Terms run up to 240 months (20 years) depending on the loan amount, the
+                                age of the boat, and the lender. Longer terms lower your monthly payment; shorter terms
+                                save you on total interest &mdash; use the calculator above to compare.</p>
+                        </div>
+                    </div>
+                    <div class="tl-svc-faq-item">
+                        <button class="tl-svc-faq-q" type="button">
+                            <span>Can I trade in my current boat?</span>
+                            <span class="tl-svc-faq-icon">+</span>
+                        </button>
+                        <div class="tl-svc-faq-a">
+                            <p class="tl-para">Yes. Get an instant estimate through our Trade-In Program and apply that
+                                equity directly toward your next MasterCraft or Barletta. It's quick, easy, and there's
+                                no obligation to buy.</p>
+                        </div>
+                    </div>
+                    <div class="tl-svc-faq-item">
+                        <button class="tl-svc-faq-q" type="button">
+                            <span>Is the monthly payment shown here a guaranteed quote?</span>
+                            <span class="tl-svc-faq-icon">+</span>
+                        </button>
+                        <div class="tl-svc-faq-a">
+                            <p class="tl-para">No &mdash; the calculator gives a good-faith estimate to help you plan. It
+                                excludes tax, title, and fees, and your actual rate and terms are confirmed once a lender
+                                reviews your application.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- financing page ends here -->
+
+        <!-- ======= Footer (shared) ======= -->
+        <footer class="tl-footer">
+            <div class="tl-newsletter">
+                <div class="tl-newsletter-inner">
+                    <div>
+                        <p class="tl-eyebrow">Newsletter Subscription</p>
+                        <h2 class="tl-h2">Stay in <span class="tl-muted">the Loop</span></h2>
+                        <p class="tl-newsletter-copy">Sign up for exclusive boating tips, local event updates, and
+                            first dibs on our newest inventory.</p>
+                    </div>
+                    <form class="tl-newsletter-form" onsubmit="return false;">
+                        <input type="email" placeholder="Enter email" aria-label="Email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="tl-foot-main">
+                <div class="tl-foot-inner">
+                    <div class="tl-foot-brand">
+                        <img class="tl-foot-logo"
+                            src="./assets/images/home/4f773e1050350288afe04896500a35e1b179f1df.png" alt="Tilly's Marine">
+                        <p class="tl-para tl-foot-about">Southern California's premier MasterCraft and Barletta boat
+                            dealership. Riverside &middot; Woodland Hills &middot; Norco.</p>
+                        <p class="tl-foot-badge">Authorized MasterCraft Dealer</p>
+                        <p class="tl-foot-badge">Authorized Barletta Dealer</p>
+                    </div>
+                    <div class="tl-foot-col">
+                        <h4>Shop</h4>
+                        <a href="javascript:void(0)">New Boats</a>
+                        <a href="javascript:void(0)">Pre-Owned Boats</a>
+                        <a href="brand-mastercraft.html">MasterCraft</a>
+                        <a href="brand-barletta.html">Barletta</a>
+                        <a href="financing.html">Financing</a>
+                        <a href="sell-trade.html">Value My Trade</a>
+                    </div>
+                    <div class="tl-foot-col">
+                        <h4>Services</h4>
+                        <a href="service.html">Boat Service</a>
+                        <a href="storage.html">Storage</a>
+                        <a href="proshop.html">Pro Shop</a>
+                        <a href="javascript:void(0)">Parts</a>
+                        <a href="javascript:void(0)">Test Drive a Boat</a>
+                    </div>
+                    <div class="tl-foot-col">
+                        <h4>Tilly's World</h4>
+                        <a href="javascript:void(0)">About Us</a>
+                        <a href="javascript:void(0)">How-To Videos</a>
+                        <a href="javascript:void(0)">Boating Blog</a>
+                        <a href="javascript:void(0)">Events</a>
+                        <a href="javascript:void(0)">Contact</a>
+                        <a href="javascript:void(0)">Careers</a>
+                    </div>
+                </div>
+
+                <div class="tl-foot-bottom">
+                    <p class="tl-foot-copy">&copy; 2025 Tilly's Marine. All rights reserved.&nbsp;&nbsp;|&nbsp;&nbsp;Powered
+                        by MDS Brand&nbsp;&nbsp;|&nbsp;&nbsp;Privacy&nbsp;&nbsp;|&nbsp;&nbsp;Accessibility</p>
+                    <div class="tl-foot-social">
+                        <a href="javascript:void(0)">Instagram</a>
+                        <a href="javascript:void(0)">Facebook</a>
+                        <a href="javascript:void(0)">YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div><!-- /.tl-page -->
+
+    <!-- ======= Script Dependencies ======= -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
