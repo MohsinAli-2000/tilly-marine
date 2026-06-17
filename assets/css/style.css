@@ -3637,6 +3637,11 @@ body.tl-mega-open {
     margin-bottom: 16px;
 }
 
+.tl-pro-loc-phone:hover{
+    color: #fff;
+}
+
+
 .tl-pro-loc-dir {
     display: inline-block;
     font-size: 12px;
