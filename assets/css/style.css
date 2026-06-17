@@ -1051,6 +1051,10 @@ body.tl-mega-open {
     opacity: 0.55;
 }
 
+.tl-loc-phone:hover{
+    color: #fff;
+}
+
 .tl-loc-arrow {
     position: absolute;
     right: 40px;
@@ -3066,6 +3070,7 @@ body.tl-mega-open {
 
 .tl-stg-pkg-link:hover {
     opacity: 1;
+    color: #fff;
 }
 
 .tl-stg-pkg-link--bright {
