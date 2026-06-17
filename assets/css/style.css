@@ -1846,6 +1846,7 @@ body.tl-mega-open {
         font-size: 56px;
     }
 
+
     .tl-inventory,
     .tl-partner,
     .tl-whoweare {
@@ -2142,6 +2143,10 @@ body.tl-mega-open {
     font-size: 12px;
     letter-spacing: 2.2px;
     text-transform: uppercase;
+    color: #fff;
+}
+
+.tl-svc-offer-link:hover{
     color: #fff;
 }
 
@@ -8048,5 +8053,9 @@ body.tl-mega-open {
 @media (max-width: 576px) {
     .tl-td-media-para {
         max-width: none;
+    }
+
+    .tl-svc-stats {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
